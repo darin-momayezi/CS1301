@@ -25,7 +25,7 @@ def winterBreak():
     len_video = 10
     total_hours = (num_episodes * len_episode + num_videos * len_video) // 60
     total_mins = (num_episodes * len_episode + num_videos * len_video) - (total_hours * 60)
-    print("You spent {} hours and {} mins watching Netflix and Youtube over winter break.".format(total_hours, total_mins))
+    print("You spent {} hours and {} minutes watching Netflix and YouTube over winter break.".format(total_hours, total_mins))
 
 
 def skateboardMoney():
