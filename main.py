@@ -7,7 +7,7 @@ def dinnerTime():
     price_entree = 12
     price_drink = 4.50
     total_cost = (num_entrees * price_entree) + (num_drinks * price_drink)
-    print("The total cost of all the meals and drinks is ${}".format(total_cost))
+    print("The total cost of all the meals and drinks is ${}.".format(total_cost))
 
 
 def bottleBonanza():
@@ -15,7 +15,7 @@ def bottleBonanza():
     height = float(input("What is the height of the water bottle? "))
     pi = 3.14
     volume = pi * (radius**2) * height
-    print("The volume of the water bottle is {}".format(volume))
+    print("The volume of the water bottle is {}.".format(volume))
 
 
 def winterBreak():
@@ -35,5 +35,4 @@ def skateboardMoney():
     money_saved = monthly_allowance * percent_saved
     left_over = money_saved + (monthly_allowance - money_saved - monthly_expense)
     print("You'll have ${} left to spend on your skateboard after savings and fees.".format(round(left_over, 2)))
-
 
