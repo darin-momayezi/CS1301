@@ -15,7 +15,7 @@ def bottleBonanza():
     h = float(input("What is the height of the water bottle? "))
     pi = 3.14
     V = pi * (r ** 2) * h
-    print("The volume of the water bottle is {}.".format(V))
+    print("The volume of the water bottle is {}.".format(round(V, 2)))
 
 
 def winterBreak():
@@ -36,3 +36,4 @@ def skateboardMoney():
     left_over = monthly_allowance - money_saved - monthly_expense
     print("You'll have ${} left to spend on your skateboard after savings and fees.".format(round(left_over, 2)))
 
+bottleBonanza()
