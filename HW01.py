@@ -35,5 +35,3 @@ def skateboardMoney():
     money_saved = monthly_allowance * percent_saved
     left_over = monthly_allowance - money_saved - monthly_expense
     print("You'll have ${} left to spend on your skateboard after savings and fees.".format(round(left_over, 2)))
-
-bottleBonanza()
