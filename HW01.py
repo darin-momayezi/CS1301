@@ -11,11 +11,11 @@ def dinnerTime():
 
 
 def bottleBonanza():
-    radius = float(input("What is the radius of the water bottle? "))
-    height = float(input("What is the height of the water bottle? "))
+    r = float(input("What is the radius of the water bottle? "))
+    h = float(input("What is the height of the water bottle? "))
     pi = 3.14
-    volume = pi * (radius**2) * height
-    print("The volume of the water bottle is {}.".format(volume))
+    V = pi * (r ** 2) * h
+    print("The volume of the water bottle is {}.".format(V))
 
 
 def winterBreak():
@@ -33,6 +33,6 @@ def skateboardMoney():
     percent_saved = float(input("What percentage of your allowance do you want to save? ")) / 100
     monthly_expense = 30 * (4.4 + 5.99)
     money_saved = monthly_allowance * percent_saved
-    left_over = money_saved + (monthly_allowance - money_saved - monthly_expense)
+    left_over = monthly_allowance - money_saved - monthly_expense
     print("You'll have ${} left to spend on your skateboard after savings and fees.".format(round(left_over, 2)))
 
