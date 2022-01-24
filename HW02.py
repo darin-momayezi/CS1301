@@ -4,7 +4,7 @@ def workout(exerciseName, interestedFriends, totalFriends):
     if 0.2 <= (interestedFriends / totalFriends) < 0.7:
         print(f"We will try to {exerciseName} for 30 minutes.")
     if (interestedFriends / totalFriends) >= 0.7:
-        print(f"We're so excited to {exerciseName}!")
+        print(f"We are so excited to {exerciseName}!")
 
 
 def iceCream(rating, distance):
