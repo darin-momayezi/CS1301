@@ -50,4 +50,4 @@ def trip(tripTotalCost, bankBalance, interestRate):
 
 def rightTriangles(numRows, character):
     for i in range(0, numRows + 1):
-        print((str(character * i)) + "\n")
+        print((str(character * i)))
