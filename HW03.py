@@ -10,11 +10,13 @@ def avgTotal(numString):
 
 def safeDecoder(characterString):
     list = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    idx = ""
     for ch in range(0, len(characterString)):
         if characterString[ch] in list:
-            return ch
+            idx += str(ch)
         else:
             continue
+    return idx
 
 
 def testScore(test1, test2):
@@ -49,3 +51,4 @@ def trip(tripTotalCost, bankBalance, interestRate):
 def rightTriangles(numRows, character):
     for i in range(0, numRows + 1):
         print(character * i)
+
