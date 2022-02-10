@@ -3,6 +3,8 @@ def messageDecoder(message):
     for char in message:
         if char.isalpha():
             decoded += str(char)
+        elif char == "0":
+            decoded += "0"
         elif char.isdigit():
             continue
         elif char == " ":
