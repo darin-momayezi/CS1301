@@ -44,7 +44,7 @@ def highGrades(students, gpas):
 def quidditchPlay(playerOrder, partners):
     isApproved = False
     for i in range(len(playerOrder)):
-        if playerOrder[i] in partners and playerOrder[i + 1] in partners:
+        if i != (len(playerOrder) - 1) and playerOrder[i] in partners and playerOrder[i + 1] in partners:
             isApproved = True
             return isApproved
         elif i != 0 and playerOrder[i] in partners and playerOrder[i - 1] in partners:
