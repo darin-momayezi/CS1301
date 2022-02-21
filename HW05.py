@@ -73,4 +73,6 @@ def smashBros(fighterList, opponents):
     goodPicks = []
     if counterPick(opponents) in fighterList:
         goodPicks.append(counterPick(opponents))
+    if len(goodPicks) == 0:
+        return 'No Counters!'
     return sorted(goodPicks)
