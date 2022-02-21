@@ -37,9 +37,11 @@ def fixLabels(labelList):
         elif type(element) == float:
             prices.append(element)
 
-    for element in names:
+        for element in names:
         corrected.append((element, prices[index]))
         index += 1
+        if len(names) != len(prices):
+            return 'Missing labels'
     return sorted(corrected)
 
 
