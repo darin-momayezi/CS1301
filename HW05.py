@@ -52,7 +52,7 @@ def newPlaylist(playlist):
         mins_secs = element[1].split(':')
         mins.append(float(mins_secs[0]))
         secs.append(float(mins_secs[1]))
-    return [tuple(sorted(songs)), (sum(mins) + (sum(secs) / 60))]
+    return [tuple(sorted(songs)), round(sum(mins) + (sum(secs) / 60), 2)]
 
 
 def birthdays(friends, birthdates):
