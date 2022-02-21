@@ -23,8 +23,8 @@ def showToWatch(friendsFavShows, favoriteShow):
     for a in friendsFavShows:
         if favoriteShow in a[1]:
             friends.append(a[0])
-        if len(friends) == 0:
-            return 'Lonely night :('
+    if len(friends) == 0:
+        return 'Lonely night :('
     return sorted(friends)
 
 
