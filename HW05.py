@@ -23,7 +23,7 @@ def showToWatch(friendsFavShows, favoriteShow):
     for a in friendsFavShows:
         if favoriteShow in a[1]:
             friends.append(a[0])
-    return friends
+    return sorted(friends)
 
 
 def fixLabels(labelList):
