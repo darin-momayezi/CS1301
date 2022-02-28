@@ -1,7 +1,7 @@
 def findTicket(ticketDictionary):
     prices = []
 
-    if ticketDictionary.items() == None:
+    if len(ticketDictionary.items()) == 0:
         return "No tickets available!"
 
     for airline, cost in ticketDictionary.items():
@@ -73,3 +73,4 @@ def sportManagement(countryDict):
         sportDict[sport] = sorted(countries)
 
     return sportDict
+
