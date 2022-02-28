@@ -30,7 +30,7 @@ def findHotel(hotelDictionary):
         for hotel, num in votes.items():
             most = sorted(votes.values())[-1]
             if num == most:
-                return (hotel, num)
+                return {hotel: num}
 
 
 def findEvent(myInterests, schedule):
