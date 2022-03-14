@@ -19,10 +19,13 @@ def alphabetSearch(filename, letter):
     movies = open(str(filename), 'r')
     features = movies.readlines()
     movies.close()
-    for index in range(2, len(features), 4):
+    for index in range(2, len(features) + 1, 4):
         if features[index][0].lower() == letter:
             movieDict[features[index].replace('\n', '')] = features[index + 1].replace('\n', '')
-    return movieDict
+    if len(movieDict) == 0:
+        return 'No movie tonight'
+    else:
+        return movieDict
 
 
 def favFilms(filename, movieList):
