@@ -53,6 +53,7 @@ def movieNight(filename, timeLimit):
     movieData = {}
     movieFile = open(filename, 'r')
     data = movieFile.readlines()
+    movieFile.close()
 
     for index in range(1, len(data)):
         movieInfo = data[index].split(',')
@@ -60,9 +61,8 @@ def movieNight(filename, timeLimit):
         imdb = int(movieInfo[1])
         rotten = int(movieInfo[2])
         time = int(movieInfo[3].replace('\n', ''))
-        avg = (imdb + rotten) / 2
+        avg = round(((imdb + rotten) / 2), 2)
         movieData[movie] = [avg, time]
-    movieFile.close()
 
     possibilities = []
     for movie in movieData.keys():
@@ -75,7 +75,10 @@ def movieNight(filename, timeLimit):
         if element[1] >= highest:
             highest = element[1]
             choice = element[0]
-    return (choice, highest)
+    if choice == '':
+        return "Can't do movie night on Friday"
+    else:
+        return (choice, highest)
 
 
 def movieRecs(filename, interestedList, expectedRatio):
