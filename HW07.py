@@ -26,7 +26,7 @@ def alphabetSearch(filename, letter):
 
 
 def favFilms(filename, movieList):
-    allMovies = open(str(filename), 'r')
+    allMovies = open(filename, 'r')
     allMovieInfo = allMovies.readlines()
     allMovies.close()
     movieDict = {}
@@ -36,12 +36,16 @@ def favFilms(filename, movieList):
                                                                 allMovieInfo[index + 2].replace('\n', '')]
     favMovies = open('favMovies.txt', 'w')
     favMovies.write('Movie Data\n')
-    favMovies.write('\n')
+    index = 0
     for movie in movieDict.keys():
+        favMovies.write('\n')
         favMovies.write(str(movie) + '\n')
         favMovies.write(str(movieDict[movie][0]) + '\n')
-        favMovies.write(str(movieDict[movie][1]) + '\n')
-        favMovies.write('\n')
+        if (index + 1) == len(movieDict.keys()):
+            favMovies.write(str(movieDict[movie][1]))
+        else:
+            favMovies.write(str(movieDict[movie][1] + '\n'))
+        index += 1
     favMovies.close()
 
 
