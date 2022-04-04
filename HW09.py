@@ -47,9 +47,14 @@ def stringCombiner(stringList):
     if len(stringList) == 0:
         return combinedString
 
-    elif type(stringList[0]) != str:
-        combinedString += stringList[0][0]
-        return combinedString + stringCombiner(stringList[:][1:])
+    elif type(stringList[0]) != str and len(stringList[0]) != 0:
+
+        newList = [stringList[0][0]] + [stringList[0][1:]] + stringList[1:]
+        return combinedString + stringCombiner(newList)
+
+    elif len(stringList[0]) == 0:
+        return combinedString + stringCombiner(stringList[1:])
+    
     else:
         combinedString += stringList[0]
         return combinedString + stringCombiner(stringList[1:])
