@@ -1,7 +1,7 @@
 def pageNumbers(bookList):
     pageCount = 0
-    if len(bookList) <= 1:
-        return bookList[0]
+    if len(bookList) == 0:
+        return pageCount
     else:
         pageCount += bookList[0]
         return pageCount + pageNumbers(bookList[1:])
@@ -10,8 +10,8 @@ def pageNumbers(bookList):
 def letterPyramid(letter, rows):
     if letter.isupper():
         pass
-    elif rows == 1:
-        print(letter)
+    elif rows == 0:
+        pass
     else:
         letterPyramid(letter, rows - 1)
         print(letter * rows)
