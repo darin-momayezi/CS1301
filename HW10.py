@@ -64,8 +64,7 @@ class Account:
             return other < self
 
     def __eq__(self, other):
-        return self.username == other.username and self.password == other.password:
-
+        return self.username == other.username and self.password == other.password
 
     def __repr__(self):  # provided
         return f"Account({self.username}, {self.password}, {len(self.followers)}, {len(self.following)}, {len(self.videos)}, {self.isPrivate})"
@@ -90,9 +89,9 @@ class TikTok:
 
     def changePrivacy(self, user):
         if user.isPrivate:
-            user.isPrivate == False
+            user.isPrivate = False
         else:
-            user.isPrivate == True
+            user.isPrivate = True
 
     def deleteAccount(self, user):
         if user in self.accounts:
