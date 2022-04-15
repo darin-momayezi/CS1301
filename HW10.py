@@ -1,10 +1,10 @@
 class Video:
 
-    def __init__(self, sound, minutes):
+    def __init__(self, sound, minutes=1.0):
         self.sound = sound
         self.likes = 0
         self.comments = 0
-        self.minutes = 1.0
+        self.minutes = minutes
 
     def __str__(self):
         return "Video has {} likes and is {} minute long.".format(self.likes, self.minutes)
@@ -42,7 +42,7 @@ class Account:
 
     def follow(self, followedAccount):
         self.following.append(followedAccount)
-        followedAccount.followers += self
+        followedAccount.followers.append(self)
 
     def unfollow(self, unfollowedAccount):
         if unfollowedAccount in self.following:
