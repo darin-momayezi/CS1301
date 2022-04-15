@@ -35,7 +35,7 @@ class Account:
     def isInfluencer(self):
         if len(self.videos) >= 5:
             for video in self.videos:
-                if video.likes >= 50000 and video.comments >= 1000 and video.isPrivate == False:
+                if video.likes >= 50000 and video.comments >= 1000 and not self.isPrivate:
                     return True
                 else:
                     return False
@@ -80,8 +80,9 @@ class TikTok:
         self.soundBase = []
 
     def makeAccount(self, username, password):
-        if username in self.accounts:
-            return "Username is already taken."
+        for account in self.accounts:
+            if username == account.username:
+                return "Username is already taken."
         else:
             newAccount = Account(username, password)
             self.accounts.append(newAccount)
