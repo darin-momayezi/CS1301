@@ -57,8 +57,8 @@ class Account:
         otherLikes = 0
         for video in self.videos:
             myLikes += video.likes
-        for video in other.videos:
-            otherLikes += video.likes
+        for video1 in other.videos:
+            otherLikes += video1.likes
         if myLikes < otherLikes:
             return self < other
         elif myLikes > otherLikes:
