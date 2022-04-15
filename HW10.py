@@ -18,13 +18,13 @@ class Video:
 
 class Account:
 
-    def __init__(self, username, password, isPrivate):
+    def __init__(self, username, password, isPrivate=True):
         self.username = username
         self.password = password
         self.followers = []
         self.following = []
         self.videos = []
-        self.isPrivate = True
+        self.isPrivate = isPrivate
 
     def changePassword(self, oldPassword, newPassword):
         if oldPassword != self.password:
