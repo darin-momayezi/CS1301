@@ -11,7 +11,7 @@ def puppyFinder(puppyCityDict, cityDistanceDict):
         if puppyCityDict[puppy] == closestCity:
             myPuppy = puppy
             
-    return "Your new puppy, {}, is in {} {}".format(myPuppy, closestCity, distance)
+    return "Your new puppy, {}, is in {} {} miles away.".format(myPuppy, closestCity, distance)
 
 def doubleOddhalfEven(numberList):
     if len(numberList) == 0:
@@ -82,9 +82,10 @@ def songMystery(codedSong, songNames):
         for char in codedSong.lower():
             if char in song:
                 common += 1
-        if common > most and common == len(song):
+        if common > most:
             most = common
             newSong = song
-            return newSong.lower()
-        else:
-            return "I need more clues :("        
+    if most == len(newSong):
+        return newSong.lower()
+    else:
+        return "I need more clues :("       
