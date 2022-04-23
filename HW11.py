@@ -80,7 +80,7 @@ def songMystery(codedSong, songNames):
     for song in songNames:
         common = 0
         for char in codedSong.lower():
-            if char in song:
+            if char in song.lower():
                 common += 1
         if common > most:
             most = common
@@ -88,4 +88,4 @@ def songMystery(codedSong, songNames):
     if most == len(newSong):
         return newSong.lower()
     else:
-        return "I need more clues :("       
+        return "I need more clues :("    
