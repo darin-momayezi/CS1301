@@ -85,7 +85,7 @@ def songMystery(codedSong, songNames):
         if common > most:
             most = common
             newSong = song
-    if most == len(newSong):
+    if len(newSong) -2 <= most <= len(newSong) + 2:
         return newSong.lower()
     else:
-        return "I need more clues :("    
+        return "I need more clues :("   
